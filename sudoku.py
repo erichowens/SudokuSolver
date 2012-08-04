@@ -152,13 +152,12 @@ def sudoku_solver(input_data=None):
     best_SP = deepcopy(SP)
     current_score = SP.score_board()
     best_score = current_score
-    #T = .15
     T = .5
     count = 0
     
-    while (count < 40000):
+    while (count < 400000):
         try:
-            if (count % 200 == 0): 
+            if (count % 1000 == 0): 
                 print "Iteration %s,    \tT = %.5f, \tbest_score = %s, \tcurrent_score = %s"%(count, T, 
                                                                best_score, current_score)
             candidate_data = SP.make_candidate_data()
@@ -178,7 +177,7 @@ def sudoku_solver(input_data=None):
                 SP = SP_candidate
                 break
     
-            T = .99991*T
+            T = .99999*T
             count += 1
         except:
             print "Hit an inexplicable numerical error. It's a random algorithm-- try again."            
