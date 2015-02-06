@@ -35,7 +35,7 @@ Gritty, Mathy Details
   as .5), with a geometric schedule for decreasing (perhaps by 
   T <- .99999 T).
     
-  If U is drawn uniformly from [0,1], and exp((delta_S/T)) > U,
+  If U is drawn uniformly from [0,1], and exp(-(delta_S/T)) > U,
   then we accept the candidate solution as our new state.
 
 Usage
